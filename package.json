@@ -1,0 +1,19 @@
+{
+  "name": "obamid-bot-revolt",
+  "version": "0.0.1",
+  "description": "The bot for THE obamids in revolt",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "sus",
+    "amogus"
+  ],
+  "author": "The Head of Business (CEO)",
+  "license": "ISC",
+  "dependencies": {
+    "better-revolt-js": "^0.1.2-beta"
+  }
+}
