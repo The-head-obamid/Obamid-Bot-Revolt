@@ -1,4 +1,4 @@
-#Obamid Bot
+Obamid Bot
 ---
 Bot designated for specialized interactions within the obamids revolt server
 
