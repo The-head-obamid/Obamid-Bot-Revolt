@@ -1,3 +1,5 @@
+#Obamid Bot
+---
 Bot designated for specialized interactions within the obamids revolt server
 
 If needed for personal purposes, the bot can be tweaked to your liking.
