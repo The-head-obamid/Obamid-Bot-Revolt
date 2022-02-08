@@ -1,12 +1,16 @@
 Obamid Bot
 ---
+**BOT CURRENTLY IN DEVELOPMENT**
+
 Bot designated for specialized interactions within the obamids revolt server
+
+---
 
 If needed for personal purposes, the bot can be tweaked to your liking.
 To authenticate, create a config.js file and in it, paste the following:
 
 ```js
-export var token = "INPUT TOKEN_HERE"
+export var token = "INPUT TOKEN HERE"
 export var prefix = "INPUT PREFIX HERE"
 ```
 
