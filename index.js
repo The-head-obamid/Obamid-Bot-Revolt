@@ -8,8 +8,8 @@ client.once("ready", async () =>
     console.info(`Logged in as ${client.user.username}!`),
 );
 
-client.on("message", async (message) => {
-    console.info(`${message.channel.name}: ${message.content}`)
+client.on("message", async (msg) => {
+    console.info(`${Date.UTC.toString()} ${msg.user.username}: ${msg.content}`)
 
     if (message.content === "hello") {
         message.channel.sendMessage("world");
