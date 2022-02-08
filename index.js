@@ -9,7 +9,7 @@ client.once("ready", async () =>
 );
 
 client.on("message", async (msg) => {
-    console.info(`${Date.UTC.toString()} ${msg.user.username}: ${msg.content}`)
+    console.info(`${Date.UTC.toString()} ${msg.user.name}: ${msg.content}`)
 
     if (message.content === "hello") {
         message.channel.sendMessage("world");
