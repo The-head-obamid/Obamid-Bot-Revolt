@@ -9,23 +9,35 @@ client.once("ready", async () =>
 );
 
 client.on("message", async (msg) => {
-	if (!msg.server) {
-		console.info(`${msg.author.username} > ${msg.content}\n{${msg.channel.name} | ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}}`)
-	} else if (msg.author) {
-		console.info(`${msg.author.username} > ${msg.content}\n{${msg.server.name}/${msg.channel.name} | ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}}`)
+	let serverMessage = false;
+	let joinEvent = false;
+	let groupMessage = false;
+
+	if (msg.server) {
+		if (!msg.author) {
+			joinEvent = true;
+			console.log(`Message type: join event`);
+			return;
+		} else {
+			serverMessage = true;
+			console.log(`Message type: server`)
+		}
 	} else {
-		console.info(`${msg.author.username} > ${msg.content}\n{${msg.server.name}/${msg.channel.name} | ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}}`)		
+	groupMessage = true;
+	console.log(`Message type: group chat`)
 	}
 
+	if (groupMessage) {
+		console.info(`${msg.author.username} > ${msg.content}\n{${msg.channel.name} | ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}}`)
+	} else if (serverMessage) {
+		console.info(`${msg.author.username} > ${msg.content}\n{${msg.server.name}/${msg.channel.name} | ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}}`)
+	} else if (joinEvent) {
+		console.info(`${msg.content}\n{${msg.server.name} | ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}}`)
+	}
 
-
-    if (msg.author) {
-        console.info("True")
-    } else {
-    	console.info("False")
-    }
+	// if (joinEvent) {}
 });
 
-client.on("server_member_join", async (member) => {
+client.on("member/join", async (member) => {
 	console.info(`${member.username}`)
 })
