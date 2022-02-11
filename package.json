@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "The bot for THE obamids in revolt",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "test"
   },
